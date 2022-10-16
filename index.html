@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Hi, I'm Davey. A creative developer that designs and develops dope web experiences">
+    <meta name="keywords" content="davey zaal developer webdeveloper designer html css javascript nodejs web design
+      website builder website creator creative">
+    <meta name="author" content="Davey Zaal">
+    <link rel="shortcut icon" href="./_assets/logoDaveyZaal.svg" type="image/x-icon">
+    <title>Davey Zaal | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @font-face {
+        font-family: 'neue';
+        src: url('./_assets/NeueHaasDisplayRoman.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'neue-light';
+        src: url('./_assets/NeueHaasDisplayLight.ttf') format('truetype');
+        font-weight: normal;
+        font-style: light;
+      }
+
+      .roman {
+        font-family: 'neue';
+      }
+
+      .roman-light {
+        font-family: 'neue-light';
+      }
+
+      body {
+        background-color: #EAEAE8;
+        color: #132A0C;
+      }
+
+      .link-underline {
+        border-bottom-width: 0;
+        background-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000);
+        background-size: 0 1px;
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size .3s ease-in-out;
+      }
+
+      .link-underline-black {
+        background-image: linear-gradient(transparent, transparent), linear-gradient(transparent, #132A0C)
+      }
+
+      .link-underline:hover {
+        background-size: 100% 1px;
+        background-position: 0 100%
+      }
+
+      .fixed_wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 818px;
+      }
+
+      .fixed_target {
+        bottom: -100vh;
+      }
+
+      .fixed,
+      .fixed_target {
+        position: absolute;
+        top: -100vh;
+        right: 0;
+        left: 0;
+      }
+
+      .fixed {
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+  </head>
+
+  <body class="bg-{#EAEAE8}" data-scroll-container>
+    <header data-scroll-section>
+      <nav class="flex items-center justify-between mx-5 my-8">
+        <div class="flex items-center">
+          <img class="w-8" src="./_assets/logoDaveyZaal.svg" alt="logo Davey Zaal">
+          <p class="ml-2.5">Davey Zaal.</p>
+        </div>
+        <span>Menu</span>
+      </nav>
+    </header>
+
+    <main>
+      <section class="flex flex-row mx-5 items-center max-h-[80vh]" data-scroll-section>
+        <div class="basis-4/5" data-scroll data-scroll-speed="1">
+          <h1 class="text-6xl pb-9 roman">Hello, I'm<br> Davey.</h1>
+          <div class="flex flex-row items-center">
+            <div class="flex flex-row h-fit w-full">
+              <div class="border-b border-[#606060] basis-1/3 mr-5""></div>
+              <p class="text-3xl basis-2/3 roman-light">A Creative Developer that designs and develops<br> dope web experiences</p>
+            </div>
+          </div>
+          <p class="pt-5">Based in Amsterdam</p>
+        </div>
+          <img data-scroll class="w-full object-cover max-h-[70vh] flex-initial basis-1/5" src="./_img/headshotDavey.png" alt="">
+        </div>
+      </section>
+      <section class="flex flex-row justify-between items-center mx-5 h-[20vh]" data-scroll-section data-scroll-speed="1">
+        <p data-scroll data-scroll-speed="1">Currently a Creative Developer<br>
+        at <a href="https://www.flatlineagency.com" class="link link-underline link-underline-black">Flatline Agency</a></p>
+        <ul class="flex flex-row gap-32" data-scroll data-scroll-speed="1">
+          <li><a class="underline underline-offset-4">email</a></li>
+          <li><a class="underline underline-offset-4">github</a></li>
+          <li><a class="underline underline-offset-4">linkedin</a></li>
+          <li><a class="underline underline-offset-4">instagram</a></li>
+          <li><a class="underline underline-offset-4">spotify</a></li>
+        </ul>
+      </section>
+
+      <section class="h-[100vh] mx-5" data-scroll-section data-scroll-speed="1">
+        <div class="flex flex-row h-fit w-full" data-scroll>
+          <p class="text-6xl auto roman-light basis-1/3">Featured</p>
+          <div class="border-b border-[#606060] basis-2/3 mr-5"></div>
+        </div>
+      </section>
+
+      <section class="h-[100vh]">
+        <div class="fixed_wrapper">
+        
+          <div class="fixed_target" id="fixed-target"></div>
+        
+          <div class="fixed h-full" data-scroll data-scroll-sticky data-scroll-target="#fixed-target"
+            style="background-image:url('./_img/headshotDavey.png')">
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+
+        const scroll = new LocomotiveScroll({
+          el: document.querySelector('[data-scroll-container]'),
+          smooth: true
+        });
+    </script>
+
+  </body>
+</html>
